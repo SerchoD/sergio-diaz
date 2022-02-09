@@ -8,11 +8,12 @@ const MainPresentation = ({ style }) => {
 	const [X, setMouseX] = useState(0);
 	const [Y, setMouseY] = useState(0);
 
-	const [screenHeight, setScreenHeight] = useState(window.innerHeight);
-	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
-	const [centerVertical, setCenterVertical] = useState(screenHeight / 2);
-	const [centerHorizontal, setCenterHorizontal] = useState(screenWidth / 2);
+	const [centerVertical, setCenterVertical] = useState(
+		window.innerHeight / 2
+	);
+	const [centerHorizontal, setCenterHorizontal] = useState(
+		window.innerWidth / 2
+	);
 
 	const handleMouseMove = (e) => {
 		setMouseX(e.clientX);
@@ -21,11 +22,8 @@ const MainPresentation = ({ style }) => {
 
 	useEffect(() => {
 		const handleResize = () => {
-			setScreenHeight(window.innerHeight);
-			setScreenWidth(window.innerWidth);
-
-			setCenterVertical(screenHeight / 2);
-			setCenterHorizontal(screenWidth / 2);
+			setCenterVertical(window.innerHeight / 2);
+			setCenterHorizontal(window.innerWidth / 2);
 		};
 		window.addEventListener('resize', handleResize);
 	}, []);
@@ -42,8 +40,8 @@ const MainPresentation = ({ style }) => {
 					className={styles.textContainer}
 					style={{
 						position: 'relative',
-						bottom: `${centerHorizontal / 20 - Y / 20}px`,
-						right: `${centerVertical / 20 - X / 20}px`,
+						bottom: `${centerHorizontal / 10 - Y / 5}px`,
+						right: `${centerVertical / 5 - X / 5}px`,
 					}}
 				>
 					<h1>Sergio Díaz</h1>
