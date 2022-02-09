@@ -67,8 +67,13 @@
 
 	.textContainer {
 		text-shadow: 5px 5px 10px black;
+		transition: 1s ease-out;
+
 		h1 {
+			width: fit-content;
 			color: rgb(189, 189, 189);
+
+			line-height: 120%;
 
 			font-size: 10rem;
 			font-family: Tangerine-Bold, cursive;
@@ -109,6 +114,8 @@
 
 		h2 {
 			color: rgb(189, 189, 189);
+			width: fit-content;
+
 			opacity: 0.75;
 
 			animation-name: h2-anim;
@@ -141,6 +148,7 @@
 		}
 
 		h3 {
+			width: fit-content;
 			color: rgb(189, 189, 189);
 			opacity: 0.75;
 
