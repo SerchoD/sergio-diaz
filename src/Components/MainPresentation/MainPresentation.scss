@@ -1,0 +1,186 @@
+.mainPresentation__container {
+	// Make Text Unselectable
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+
+	height: 100vh;
+	background: url('../../assets/images/nigthStars.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	animation-name: fade-in;
+	animation-duration: 2s;
+	animation-delay: 0s;
+	animation-timing-function: ease-in;
+
+	.shootingStar {
+		z-index: 2;
+		width: 500px;
+		height: 200px;
+		background: url('../../assets/images/shooting-star.png');
+		background-repeat: no-repeat;
+		scale: 0.25;
+
+		position: absolute;
+		top: 5%;
+		left: 80%;
+		transform: rotate(20deg);
+
+		animation-name: shootingStar;
+		animation-duration: 1.5s;
+		animation-delay: 6s;
+		animation-timing-function: linear;
+
+		opacity: 0;
+	}
+	@keyframes shootingStar {
+		0% {
+			opacity: 1;
+
+			position: absolute;
+			top: 0%;
+			left: 80%;
+			transform: rotate(15deg);
+		}
+		15% {
+			filter: brightness(0.5) opacity(1);
+		}
+		25% {
+			filter: brightness(4) opacity(2);
+		}
+		35% {
+			filter: brightness(0.5) opacity(0.3);
+		}
+		100% {
+			opacity: 1;
+
+			filter: brightness(0) opacity(0);
+
+			position: absolute;
+			top: 8%;
+			left: -80%;
+			transform: rotate(5deg);
+		}
+	}
+
+	.textContainer {
+		text-shadow: 5px 5px 10px black;
+		h1 {
+			color: rgb(189, 189, 189);
+
+			font-size: 10rem;
+			font-family: Tangerine-Bold, cursive;
+			font-weight: 500;
+
+			animation-name: h1-anim;
+			animation-duration: 5s;
+			animation-delay: 2s;
+			animation-fill-mode: forwards;
+
+			opacity: 0;
+			transition: 1.5s;
+		}
+		h1:hover {
+			color: white;
+			scale: 1.02;
+			transition: 1.5s;
+		}
+
+		@keyframes h1-anim {
+			0% {
+				filter: blur(10px);
+				opacity: 0;
+				position: relative;
+				left: 50%;
+			}
+			20% {
+				left: -5%;
+			}
+
+			100% {
+				filter: blur(0px);
+				opacity: 1;
+				position: relative;
+				left: 0%;
+			}
+		}
+
+		h2 {
+			color: rgb(189, 189, 189);
+			opacity: 0.75;
+
+			animation-name: h2-anim;
+			animation-duration: 4s;
+			animation-delay: 2s;
+			animation-fill-mode: forwards;
+
+			opacity: 0;
+			transition: 1.5s;
+		}
+		h2:hover {
+			color: white;
+			scale: 1.02;
+			transition: 1.5s;
+		}
+		@keyframes h2-anim {
+			0% {
+				filter: blur(10px);
+				opacity: 0;
+				position: relative;
+				left: -50%;
+			}
+
+			100% {
+				filter: blur(0px);
+				opacity: 1;
+				position: relative;
+				left: 0%;
+			}
+		}
+
+		h3 {
+			color: rgb(189, 189, 189);
+			opacity: 0.75;
+
+			animation-name: h3-anim;
+			animation-duration: 4s;
+			animation-delay: 2s;
+			animation-fill-mode: forwards;
+			opacity: 0;
+
+			transition: 1.5s;
+		}
+		h3:hover {
+			color: white;
+			scale: 1.02;
+			transition: 1.5s;
+		}
+		@keyframes h3-anim {
+			0% {
+				filter: blur(10px);
+
+				opacity: 0;
+				position: relative;
+				left: 50%;
+			}
+			100% {
+				filter: blur(0px);
+
+				opacity: 1;
+				position: relative;
+				left: 0%;
+			}
+		}
+	}
+
+	@keyframes fade-in {
+		from {
+			filter: brightness(0);
+		}
+		to {
+			filter: brightness(1);
+		}
+	}
+}
