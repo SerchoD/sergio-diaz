@@ -1,9 +1,11 @@
 import './App.css';
 import MainPresentation from './Components/MainPresentation/MainPresentation';
+import TopBar from './Components/TopBar/TopBar';
 
 function App() {
 	return (
-		<div className='App'>
+		<div>
+			<TopBar />
 			<MainPresentation />
 			<div
 				style={{

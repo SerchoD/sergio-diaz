@@ -40,8 +40,8 @@ const MainPresentation = ({ style }) => {
 					className={styles.textContainer}
 					style={{
 						position: 'relative',
-						bottom: `${centerHorizontal / 10 - Y / 5}px`,
-						right: `${centerVertical / 5 - X / 5}px`,
+						bottom: `${centerHorizontal / 20 - Y / 15}px`,
+						right: `${centerVertical / 15 - X / 15 + 100}px`,
 					}}
 				>
 					<h1>Sergio Díaz</h1>
@@ -50,6 +50,7 @@ const MainPresentation = ({ style }) => {
 							position: 'relative',
 							bottom: `${centerHorizontal / 50 - Y / 50}px`,
 							right: `${centerVertical / 50 - X / 50}px`,
+							transition: '1s ease-out',
 						}}
 					>
 						<h2>Front End Developer</h2>
@@ -59,6 +60,7 @@ const MainPresentation = ({ style }) => {
 							position: 'relative',
 							bottom: `${centerHorizontal / 30 - Y / 30}px`,
 							right: `${centerVertical / 30 - X / 30}px`,
+							transition: '1s ease-out',
 						}}
 					>
 						<h3>JavaScript - ReactJs</h3>
