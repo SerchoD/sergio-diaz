@@ -1,2 +1,39 @@
-.topBar_mainContainer {
+.topBar__mainContainer {
+	z-index: 1;
+	position: fixed;
+	top: 0;
+
+	width: 100%;
+
+	height: 0px;
+	opacity: 0;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+
+	color: white;
+
+	animation-name: topBar-unHide;
+	animation-duration: 3s;
+	animation-timing-function: ease-out;
+
+	&--hide {
+		height: 0px;
+		opacity: 0;
+		transition: 0.3s ease-out;
+	}
+	&--unhide {
+		height: 50px;
+		opacity: 1;
+		transition: 0.3s ease-out;
+	}
+}
+
+@keyframes topBar-unHide {
+	from {
+		height: 0px;
+		opacity: 0;
+	}
+	to {
+		height: 50px;
+		opacity: 1;
+	}
 }
